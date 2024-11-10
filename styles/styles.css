@@ -75,16 +75,16 @@ header .profile img {
   }
   
   .certificates {
-    width: 200%; /* Ocupa todo el ancho disponible */
-    text-align: center; /* Centra el contenido horizontalmente */
-    background-color: #f0f0f0; /* Color de fondo opcional */
-    padding: 20px; /* Espacio interno opcional */
+    width: 200%; 
+    text-align: center; 
+    background-color: #f0f0f0; 
+    padding: 20px;
 }
 
 .courses {
     display: flex;
-    justify-content: center; /* Centra los botones horizontalmente */
-    gap: 10px; /* Espacio entre los botones */
+    justify-content: center; 
+    gap: 10px; 
 }
 
   .course-work, .location, .certificates {
@@ -182,8 +182,8 @@ header .profile img {
   
 
   footer img {
-    width: 50px; /* Ajusta el ancho de la imagen según tus necesidades */
+    width: 50px; 
     height: auto;
-    vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
+    vertical-align: middle; 
     margin-left: 5px;
   }
