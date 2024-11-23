@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const listViewButton = document.getElementById("listView");
   
     // Fetch members data
-    const response = await fetch("chamber/data/directory.json");
+    const response = await fetch("data/directory.json");
     const members = await response.json();
   
     // Function to render members
