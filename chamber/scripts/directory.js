@@ -9,17 +9,22 @@ document.addEventListener("DOMContentLoaded", async () => {
   
     // Function to render members
     const renderMembers = (view) => {
+      // Asegura que el contenedor tenga la clase correcta
       memberDirectory.className = view;
+  
+      // Genera dinámicamente el HTML para cada miembro del JSON
       memberDirectory.innerHTML = members.map(member => `
-        <div class="member-card">
-          <img src="images/${member.image}" alt="${member.name}">
-          <h3>${member.name}</h3>
-          <p>${member.address}</p>
-          <p>${member.phone}</p>
-          <a href="${member.website}" target="_blank">Visit Website</a>
-        </div>
+          <div class="member-card">
+            <img src="${member.image}" alt="${member.name}">
+            <h3>${member.name}</h3>
+            <p>${member.address}</p>
+            <p>${member.phone}</p>
+            <a href="${member.website}" target="_blank">Visit Website</a>
+            <img class="favicon" src="${member.favicon || 'default-favicon.ico'}" alt="${member.name} Favicon">
+          </div>
       `).join("");
-    };
+  };
+  
   
     // Initial render as grid view
     renderMembers("grid");
