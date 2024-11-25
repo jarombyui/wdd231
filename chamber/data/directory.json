@@ -4,7 +4,7 @@
       "address": "123 Main St, City, State",
       "phone": "(123) 456-7890",
       "website": "https://companyone.com",
-      "image": "company-one.jpg",
+      "image": "images/company_1.ico",
       "membershipLevel": 1,
       "favicon": "favicons/company-one-favicon.ico"
   },
@@ -13,7 +13,7 @@
       "address": "456 Elm St, City, State",
       "phone": "(987) 654-3210",
       "website": "https://companytwo.com",
-      "image": "images/company-two.ico",
+      "image": "images/company_2.ico",
       "membershipLevel": 2,
       "favicon": "images/company-two-favicon.ico"
   },
@@ -22,7 +22,7 @@
       "address": "789 Oak St, City, State",
       "phone": "(555) 123-4567",
       "website": "https://companythree.com",
-      "image": "company-three.jpg",
+      "image": "images/company_3.ico",
       "membershipLevel": 3,
       "favicon": "favicons/company-three-favicon.ico"
   }
