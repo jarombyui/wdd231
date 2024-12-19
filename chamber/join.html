@@ -1,0 +1,329 @@
+<!-- join.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Chamber</title>
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <header>
+        <h1>Chamber: Home page</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="directory.html" >Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Membership Form</h2>
+            <form method="get" action="thankyou.html">
+                <label>
+                    First Name:
+                    <input type="text" name="first_name" title="Enter your first name" autocomplete="given-name" required>
+                </label>
+
+                <label>
+                    Last Name:
+                    <input type="text" name="last_name" title="Enter your last name" autocomplete="family-name" required>
+                </label>
+
+                <label>
+                    Organizational Title:
+                    <input type="text" name="organization_title" title="Enter your organizational title" autocomplete="organization-title" 
+                           pattern="[A-Za-z\-\s]{7,}" required>
+                </label>
+
+                <label>
+                    Email Address:
+                    <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@domain.com" required>
+                </label>
+
+                <label>
+                    Mobile Phone:
+                    <input type="tel" name="phone" title="Enter your mobile number" autocomplete="tel" required>
+                </label>
+
+                <label>
+                    Business/Organization Name:
+                    <input type="text" name="organization_name" title="Enter your business or organization name" autocomplete="organization" required>
+                </label>
+
+                <label>
+                    Membership Level:
+                    <select name="membership_level" title="Select your membership level" required>
+                        <option value="NP">Non-Profit Membership (Free)</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>
+                    Business Description:
+                    <textarea name="business_description" title="Describe your business"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section class="membership-cards">
+            <div class="card" id="np-card">
+                <h3>Non-Profit Membership</h3>
+                <button onclick="showModal('np-modal')">Learn More</button>
+            </div>
+            <div class="card" id="bronze-card">
+                <h3>Bronze Membership</h3>
+                <button onclick="showModal('bronze-modal')">Learn More</button>
+            </div>
+            <div class="card" id="silver-card">
+                <h3>Silver Membership</h3>
+                <button onclick="showModal('silver-modal')">Learn More</button>
+            </div>
+            <div class="card" id="gold-card">
+                <h3>Gold Membership</h3>
+                <button onclick="showModal('gold-modal')">Learn More</button>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <div class="modal" id="np-modal">
+            <div class="modal-content">
+                <h4>Non-Profit Membership Benefits</h4>
+                <p>Free membership for non-profit organizations. Includes event access and basic directory listing.</p>
+                <button onclick="closeModal('np-modal')">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="bronze-modal">
+            <div class="modal-content">
+                <h4>Bronze Membership Benefits</h4>
+                <p>Includes event discounts and marketing resources.</p>
+                <button onclick="closeModal('bronze-modal')">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="silver-modal">
+            <div class="modal-content">
+                <h4>Silver Membership Benefits</h4>
+                <p>Includes all Bronze benefits plus training and networking opportunities.</p>
+                <button onclick="closeModal('silver-modal')">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="gold-modal">
+            <div class="modal-content">
+                <h4>Gold Membership Benefits</h4>
+                <p>Includes all Silver benefits plus premium advertising and spotlight positions.</p>
+                <button onclick="closeModal('gold-modal')">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact us: info@chamber.com | (123) 456-7890</p>
+        <p>Developed by Jarom Campos | WDD 231 | <span id="lastModified"></span></p>
+        <p>&copy; <span id="year"></span> Chamber</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Form</title>
+    <link rel="stylesheet" href="styles/join.css">
+</head>
+<body>
+    <div class="container">
+        <form method="get" action="thankyou.html">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" title="First Name" autocomplete="given-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" title="Last Name" autocomplete="family-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="organization-title">Organization Title</label>
+                <input type="text" id="organization-title" name="organization_title" 
+                       title="Organization Title" autocomplete="organization-title" 
+                       pattern="[A-Za-z\\-\\s]{7,}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" title="Email Address" 
+                       autocomplete="email" placeholder="example@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" title="Mobile Number" 
+                       autocomplete="tel" placeholder="123-456-7890" required>
+            </div>
+
+            <div class="form-group">
+                <label for="organization-name">Organization Name</label>
+                <input type="text" id="organization-name" name="organization_name" 
+                       title="Organization Name" autocomplete="organization" required>
+            </div>
+
+            <div class="form-group">
+                <label for="membership-level">Membership Level</label>
+                <select id="membership-level" name="membership_level">
+                    <option value="np">NP Membership (Non-Profit, No Fee)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="organization-description">Organization Description</label>
+                <textarea id="organization-description" name="organization_description" 
+                          title="Organization Description"></textarea>
+            </div>
+
+            <input type="hidden" id="timestamp" name="timestamp" value="">
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="membership-cards">
+            <div class="card">
+                <h2>NP Membership</h2>
+                <a href="#np-modal">Learn More</a>
+            </div>
+            <div class="card">
+                <h2>Bronze Membership</h2>
+                <a href="#bronze-modal">Learn More</a>
+            </div>
+            <div class="card">
+                <h2>Silver Membership</h2>
+                <a href="#silver-modal">Learn More</a>
+            </div>
+            <div class="card">
+                <h2>Gold Membership</h2>
+                <a href="#gold-modal">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Membership Modals -->
+        <div id="np-modal" class="modal">
+            <div class="modal-content">
+                <h3>NP Membership Benefits</h3>
+                <p>No fee, access to events, and networking opportunities.</p>
+                <button class="close-modal">Close</button>
+            </div>
+        </div>
+        <!-- Repeat for other memberships -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const timestampInput = document.getElementById('timestamp');
+            if (timestampInput) {
+                timestampInput.value = new Date().toISOString();
+            }
+
+            const closeButtons = document.querySelectorAll('.close-modal');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    this.closest('.modal').style.display = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Form</title>
+    <link rel="stylesheet" href="styles/join.css">
+</head>
+<body>
+    <form method="get" action="thankyou.html">
+        <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" title="First Name" autocomplete="given-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" title="Last Name" autocomplete="family-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="organization-title">Organization Title</label>
+            <input type="text" id="organization-title" name="organization_title" title="Organization Title" autocomplete="organization-title" pattern="[A-Za-z\\-\\s]{7,}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" title="Email Address" autocomplete="email" placeholder="example@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" title="Mobile Number" autocomplete="tel" required>
+        </div>
+
+        <div class="form-group">
+            <label for="organization-name">Organization Name</label>
+            <input type="text" id="organization-name" name="organization_name" title="Organization Name" autocomplete="organization" required>
+        </div>
+
+        <div class="form-group">
+            <label for="membership-level">Membership Level</label>
+            <select id="membership-level" name="membership_level">
+                <option value="np">NP Membership (Non-Profit, No Fee)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="organization-description">Organization Description</label>
+            <textarea id="organization-description" name="organization_description" title="Organization Description"></textarea>
+        </div>
+
+        <input type="hidden" id="timestamp" name="timestamp" value="">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Establece el valor del campo 'timestamp' al cargar la página
+        document.addEventListener('DOMContentLoaded', function () {
+            const timestampInput = document.getElementById('timestamp');
+            if (timestampInput) {
+                timestampInput.value = new Date().toISOString(); // Genera un formato de tiempo ISO 8601
+            }
+        });
+    </script>
+</body>
+</html>
+ --> -->
