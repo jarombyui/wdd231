@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const timeDiff = now - parseInt(lastVisit, 10);
         const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
         if (daysDiff < 1) {
-            visitorMessage.textContent = "Back so soon! Awesome!";
+            visitorMessage.textContent = "Back so soon! Are you ready to embark on an unforgettable journey through the heart of Peru? Join our exclusive community of travelers and experience the magic of the Andes, the Amazon, and the Pacific coast. ";
         } else {
             visitorMessage.textContent = `You last visited ${daysDiff} day${daysDiff > 1 ? "s" : ""} ago.`;
         }

@@ -321,3 +321,40 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
 
+/*events*/
+
+/* Estilos generales para la lista de eventos */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos para cada elemento de la lista (cada evento) */
+li {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* Línea divisoria entre eventos */
+}
+
+/* Estilos para la fecha del evento */
+.event-date {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Estilos para el título del evento */
+.event-title {
+  font-size: 18px;
+  color: #007bff; /* Azul claro llamativo */
+  margin-bottom: 10px;
+}
+
+/* Estilos para la descripción del evento */
+.event-description {
+  color: #666;
+  line-height: 1.5;
+  text-align: justify; /* Alinea el texto justificado */
+}

@@ -12,30 +12,31 @@ body, h1, p, ul, li, a, button {
     color: #333;
   }
   
-  /* Header and Navigation */
-  header {
-    background: #2d3e50;
-    color: white;
-    padding: 1em;
-    text-align: center;
-  }
   
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1em;
-  }
-  
-  nav a.active {
-    font-weight: bold;
-    text-decoration: underline;
-  }
+/* Header and Navigation */
+header {
+  background: #2d3e50;
+  color: #0056b3;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
   
   /* Main Content */
   .view-toggle {
